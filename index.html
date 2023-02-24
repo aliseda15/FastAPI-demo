@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_fastapi</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+    <div style="display: flex; justify-content: center;">
+        <div class="cuadrado1">
+            <form> 
+                <br/>       
+                <br/>  
+                <input type="text" id="valorNombreAña" placeholder="Nombre" required="required"></input>
+                <input type="text" id="valorApellidoAña" placeholder="Apellido" required="required"></input>
+                <input type="text" id="valorTrabajoAña" placeholder="Posicion" required="required"></input>
+                <br/>
+                <button onclick="llamarAPI4()"">Añadir</button>
+            </form>
+        </div>
+        <div class="nuke">
+            <br/>
+            <input type="number" id="id_Borrar" required="required" max="6" min="1"></input>
+            <br/>
+            <br/>
+            <p style="text-align: center; color: red; background-color: transparent; font-size: 15px;"><b>ALERT!</b></p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Nuclear_symbol.svg/1024px-Nuclear_symbol.svg.png" width="50" height="50" style="cursor: pointer;" onclick="llamarAPI5()"></img>
+        </div>
+        <div class="cuadrado2">  
+            <form>          
+                <input type="number" id="id_Actualizar" required="required" max="6" min="1"></input>
+                <hr style="border-top: 2px solid #507DBC;"></hr>
+                <input type="text" id="valorNombreActu" placeholder="Nombre"></input>
+                <input type="text" id="valorApellidoActu" placeholder="Apellido"></input>
+                <input type="text" id="valorTrabajoActu" placeholder="Posicion"></input>
+                <br/>
+                <button onclick="llamarA()">Actualizar</button>
+            </form>
+        </div>
+    </div>
+        <div class="cuadrado15">
+            <form>
+                <input type="number"  id="buscador" required="required" max="6" min="1"></input>
+                <br/>
+                <button type="button" onclick="llamarAPI3()">Buscar</button>
+            </form>
+        </div>
+
+        <div class="cuadrado3">
+            <br/>
+            <h1 style="text-align: center; ">
+                Tabla de resultados
+            </h4>
+            <table class="tabla" id="datos">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Trabajo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="TABLA"></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
