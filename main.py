@@ -89,3 +89,14 @@ async def insertar_usuario(objeto: dict):
         resultado = cursor.fetchall()
         print(resultado)
         return resultado
+
+@app.put("/app/v1/usuarios/actualizar_usuario")
+async def actualizar_usuario(objeto: dict):
+    with conexion.cursor() as cursor:
+        print(objeto)
+        sql = 'UPDATE usuarios SET Nombre = %(nombre)s, Apellido = %(apellido)s, Trabajo = %(trabajo)s WHERE id = %(id)s'
+        cursor.execute(sql, objeto)
+        conexion.commit()
+        resultado = cursor.fetchall()
+        print(resultado)
+        return resultado
